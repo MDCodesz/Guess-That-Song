@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #5c55b4;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <h1>Your Score is</h1>
+    <button id="open" onclick="window.location.href='jukbox.html';">Exit</button>
+    <span id="theScore">Here</span>
+
+</body>
+
+</html>
+
+<!--<script src="jukebox.js"></script>-->
+
+<script>
+    
+    var revScore = localStorage.getItem("finalScore");
+    alert("the score is" + revScore);
+    //var theScore = document.getElementById("theScore");
+    //console.log(finalScore);
+    //theScore.innerHTML = finalScore + "/ 5";
+    
+
+    //document.getElementById('theScore').innerHTML+=localStorage.getItem("finalScore");
+
+</script>

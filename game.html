@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #5c55b4;
+      }
+
+      #bg {
+        background-color: #5c55b4; 
+      }
+
+      #title {
+        text-align: center;
+        color: white;
+        font-size: 100px;
+        text-shadow: -1px 1px 0 #000, 5px 7px 0 #000, 1px -1px 0 #000,
+          -1px -1px 0 #000;
+      }
+
+      p {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      #startbtn {
+        text-align: center;
+      }
+
+      #start {
+        background-color: #26d146;
+        /* Green */
+        border-radius: 25px;
+        color: white;
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+        padding: 0px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border: 2px solid #ffffff;
+        margin: auto;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+      }
+
+      #juke {
+        text-align: center;
+        justify-content: space-between;
+      }
+
+      #playbtn {
+        background-color: rgb(255, 119, 0);
+        width: 150px;
+        height: 40px;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        border-radius: 25px;
+      }
+
+      #pausebtn {
+        background-color: red;
+        width: 150px;
+        height: 40px;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        border-radius: 25px;
+      }
+
+      #selections {
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+      }
+
+      #userInput {
+        width: 600px;
+        height: 100px;
+        font-size: 30px;
+        border-radius: 35px;
+      }
+
+      option {
+        text-align: center;
+      }
+
+      #outer {
+        padding-top: 20px;
+        width: 400px;
+        height: 300px;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 100px;
+        background: #5c55b4;
+      }
+
+      #backdiv {
+        text-align: center;
+        margin: auto;
+      }
+
+      #exit {
+        background-color: rgb(174, 137, 244);
+        width: 80px;
+        height: 30px;
+        border-radius: 25px;
+      }
+
+      #back {
+        background-color: rgb(251, 255, 0);
+        width: 150px;
+        height: 40px;
+        margin-right: auto;
+        margin-bottom: 10px;
+        border-radius: 25px;
+      }
+
+      #msg {
+        color: white;
+      }
+
+      #theScore {
+        font-size: 50px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="bg">
+      <button id="exit" onclick="window.location.href='jukbox.html';">
+        Exit
+      </button>
+
+      <h1 id="title">Guess That Song</h1>
+      <br />
+      <div id="startbtn">
+        <button id="start" onclick="player()">START</button>
+      </div>
+      <p>
+        Only press "START" once<br>Once you've selected a song from the list, click "play" to hear the next
+        song
+      </p>
+
+      <div id="juke"></div>
+
+      <div id="selections">
+        <select name="input" id="userInput" onChange="compare()">
+          <option disabled selected value>-- select a song --</option>
+        </select>
+        <span id="response"></span>
+      </div>
+
+      <div id="outer">
+        <h2 id="msg"></h2>
+        <h2 id="theScore"></h2>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+<script src="jukebox.js"></script>
